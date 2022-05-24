@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="my-5">Lista de productos</h1>
+  <div class="products">
+    <div class="product" *ngFor="let product of products">
+      <h4>{{product.name}}</h4>
+      <div class="img" [ngStyle]="{ backgroundImage: 'url('+product.image+')'}"></div>
+      <p>{{product.description}}</p>
+      <p>Precio: {{product.price | currency:'EUR'}}</p>
+      <p>Departamento: {{product.category | titlecase}}</p>
+    </div>
+  </div>
+</div>
